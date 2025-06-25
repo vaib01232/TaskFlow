@@ -9,11 +9,10 @@ TaskFlow is a full-stack MERN (MongoDB, Express, React, Node.js) to-do list app 
 - Responsive and clean UI with Tailwind CSS
 - RESTful API built using Express and MongoDB
 
-## 🚀 Live Demo
-- **Frontend:** [Netlify URL here]
-- **Backend API:** [Render URL here]
-
 ## 📦 Tech Stack
 - **Frontend:** React, Tailwind CSS, Axios, Vite
 - **Backend:** Node.js, Express, MongoDB (Mongoose)
 - **Deployment:** Netlify (frontend), Render (backend)
+
+## Deployed link : 
+- https://taskflow-a.netlify.app/
