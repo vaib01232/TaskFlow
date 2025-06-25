@@ -7,23 +7,23 @@ function App() {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/tasks').then(res => setTasks(res.data));
+    axios.get('https://taskflow-11x6.onrender.com/tasks').then(res => setTasks(res.data));
   }, []);
 
   const addTask = async () => {
     if (!text.trim()) return;
-    const res = await axios.post('http://localhost:5000/tasks', { text });
+    const res = await axios.post('https://taskflow-11x6.onrender.com/tasks', { text });
     setTasks([...tasks, res.data]);
     setText('');
   };
 
   const toggleTask = async (task) => {
-    const res = await axios.patch(`http://localhost:5000/tasks/${task._id}`, { completed: !task.completed });
+    const res = await axios.patch(`https://taskflow-11x6.onrender.com/tasks/${task._id}`, { completed: !task.completed });
     setTasks(tasks.map(t => t._id === task._id ? res.data : t));
   };
 
   const deleteTask = async (id) => {
-    await axios.delete(`http://localhost:5000/tasks/${id}`);
+    await axios.delete(`https://taskflow-11x6.onrender.com/tasks/${id}`);
     setTasks(tasks.filter(t => t._id !== id));
   };
 
